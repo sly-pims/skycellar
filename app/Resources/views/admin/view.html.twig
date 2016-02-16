@@ -1,0 +1,70 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block contents %}
+
+<h1>{{ wine.name }}</h1>
+
+<div class="contents view">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>
+                Composition
+            </td>
+            <td>
+                {{ wine.composition }}
+            </td>
+        </tr>
+        <tr>
+            <td>Method</td>
+            <td>{{ wine.method }}</td>
+        </tr>
+        <tr>
+            <td>Testing notes</td>
+            <td>{{ wine.testingNotes }}</td>
+        </tr>
+        <tr>
+            <td>History</td>
+            <td>{{ wine.history }}</td>
+        </tr>
+        <tr>
+            <td>Key point / Food match</td>
+            <td>{{ wine.keyPoint }}</td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td>{{ wine.color }}</td>
+        </tr>
+        <tr>
+            <td>Vintage</td>
+            <td>{{ wine.vintage }}</td>
+        </tr>
+        <tr>
+            <td>Wine style</td>
+            <td>{{ wine.style }}</td>
+        </tr>
+        <tr>
+            <td>Region</td>
+            <td>{{ wine.region.name }}</td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td>{{ wine.region.country.name }}</td>
+        </tr>
+        <tr>
+            <td>Show</td>
+            <td>
+                {% if wine.hidden == false %}
+                <span class="glyphicon glyphicon-ok"></span>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+</div>
+
+    <div class="footer">
+    <a class="btn btn-primary" href="/admin">List</a>
+    <a class="btn btn-primary" href="{{ path('admin_edit', { id: wine.id } ) }}">Edit</a>
+    <a class="btn btn-primary" href="{{ path('admin_delete', { id: wine.id } ) }}">Delete</a>
+</div>
+
+{% endblock %}

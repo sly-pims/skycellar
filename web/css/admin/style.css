@@ -1,0 +1,58 @@
+body {
+    font-family: 'Open Sans', sans-serif !important;
+}
+body {
+    padding-top: 50px;
+}
+.common {
+    padding: 40px 15px;
+    text-align: center;
+}
+.search {
+    margin-bottom: 15px;
+}
+thead td {
+    font-weight: 900;
+}
+tbody td {
+    line-height: 32px !important;
+}
+.contents table {
+    width: 50%;
+    margin: 0 auto;
+}
+.contents table td {
+    text-align: left;
+}
+.footer {
+    margin-top: 15px;
+}
+.contents.edit textarea {
+    width: 100%;
+}
+.contents.edit td:first-child {
+    width: 180px;
+    font-weight: 900;
+}
+.contents.view td:first-child {
+    font-weight: 900;
+}
+.contents.edit textarea {
+    line-height: 15px;
+}
+.container .common .search {
+    width: 50%;
+}
+.light-table-filter {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+.list{
+    margin-top: 30px;
+}
+table .form_button div {
+    text-align: center;
+}
+.msg{
+    background: rgb(113,223,113);
+}

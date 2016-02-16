@@ -1,0 +1,50 @@
+{% extends 'forum/base.html.twig'%}
+
+{% block contents %}
+<div class="container">
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Wine
+                    <strong>forum</strong>
+                </h2>
+                <hr>
+            </div>
+            <div class="list">
+                <table class="order-table table table-striped table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <td>Categories</td>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                        <td>Text of the post, multiple can be put. Will need to change for table with selection of topic or categories</td>
+                    </tbody>
+                    <thead>
+                        <td>Recent post</td>
+                    </thead>
+                    <tbody>
+                        <td> test test test test test</td>
+                    </tbody>
+                </table>
+            </div>
+                    {#<div class="col-lg-12 text-center">#}
+                {#<img class="img-responsive img-border img-circle" src="img/slide-1.jpg" alt="">#}
+                {#<h2>Post Title#}
+                    {#<br>#}
+                    {#<small>October 13, 2013</small>#}
+                {#</h2>#}
+                {#<p>Text of the post, multiple can be put. Will need to change for table with selection of topic or categories</p>#}
+                {#<a href="#" class="btn btn-default btn-lg">Read More</a>#}
+                {#<hr>#}
+            {#</div>#}
+        </div>
+    </div>
+    <div class="footer">
+        <a class="btn btn-primary" href="{{ path('wine_forum_article' ) }}">New post</a>
+    </div>
+
+</div>
+{% endblock %}

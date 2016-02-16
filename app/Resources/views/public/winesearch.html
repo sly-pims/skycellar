@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>::: Welcome to Winecellar:::</title>
+
+    <!-- Bootstrap -->
+    <link href="vendor/startbootstrap-business-casual-1.0.4/css/business-casual.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="css/admin/style.css" rel="stylesheet">
+    <script src="js/search.js"></script>
+</head>
+<body>
+
+<!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
+    <!--<div class="container">-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="/">Winecellar</a>-->
+        <!--</div>-->
+        <!---->
+    <!--</div>-->
+<!--</nav>-->
+
+<div class="container">
+    <div class="winesearch">
+        <form>
+            <!--<div style="width:300px;">-->
+                <!--<label for="name" style="float:left;">Name:</label>-->
+                <!--<input type="text" name="uname" id="name" size="16" style="float:right;clear:right"/>-->
+                <!--<label for="pass" style="float:left;clear:left">Password:</label>-->
+                <!--<input type="text" name="pword" id="pass" size="16" style="float:right;clear:right"/>-->
+                <!--<input type="submit" name="submit" value="login" style="float:right;clear:both;"/>-->
+            <!--</div>-->
+            <label for="wine-name" style="float:left;">Wine name</label><br>
+            <input type="text" name="wineName" id="wine-name" style="float:right;clear:right"><br>
+
+            <label for="Color" style="float:left;">Color</label><br>
+            <input type="text" name="wineColor" id="Color" size="16" style="float:right;clear:right"><br>
+            <label for="Vintage" style="float:left;">Vintage</label><br>
+            <input type="text" name="wineVintage" id="Vintage" style="float:right;clear:right"><br>
+            <label for="Grape variety" style="float:left;">Grape variety</label><br>
+            <input type="text" name="wineName" id="Grape variety" style="float:right;clear:right"><br>
+
+            <!--Wine name: <input type="text" name="wineName" style="float:left;"><br>-->
+            <!--<br>-->
+            <!--Color: <input type="text" name="wineColor"><br>-->
+            <!--<br>-->
+            <!--Vintage: <input type="number" name="wineVintage"><br>-->
+            <!--<br>-->
+            <!--Grape variety: <input type="text" name="wineGrape"><br>-->
+            <!--<br>-->
+            Region:<select id="region">
+            <option>- Region -</option>
+            <option data-code="AUS">Barrossa Valley</option>
+            <option data-code="AUS">Hunter Valley</option>
+            <option data-code="AUS">Magaret River</option>
+            <option data-code="FR">Alsace</option>
+            <option data-code="FR">Bordeau</option>
+            <option data-code="FR">Burgundy</option>
+            <option data-code="FR">Champagne</option>
+            <option data-code="FR">Cotes du Rhone</option>
+            <option data-code="NZ">Auckland</option>
+            <option data-code="NZ">Bay of Plenty</option>
+            <option data-code="NZ">Canterbury</option>
+            <option data-code="NZ">Gisborn</option>
+            <option data-code="NZ">Hawke's Bay</option>
+            <option data-code="NZ">Manawatu</option>
+            <option data-code="NZ">Marlborough</option>
+            <option data-code="NZ">Nelson</option>
+            <option data-code="NZ">Northland</option>
+            <option data-code="NZ">Otago</option>
+            <option data-code="NZ">Southland</option>
+            <option data-code="NZ">Taranaki</option>
+            <option data-code="NZ">Tasman</option>
+            <option data-code="NZ">Waiheke</option>
+            <option data-code="NZ">Wellington</option>
+            <option data-code="NZ">West Coast</option>
+            </select> <br>
+            <br>
+            Country: <select id="country">
+            <option>- Country -</option>
+            <option data-code="AUS">Australia</option>
+            <option data-code="FR">France</option>
+            <option data-code="NZ">New Zealand</option>
+            </select><br>
+            <br>
+            <br>
+            <button type="Submit">Search</button>
+            <button type="Submit">Cancel</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="vendor/startbootstrap-business-casual-1.0.4/js/bootstrap.min.js"></script>
+
+</body>
+</html>

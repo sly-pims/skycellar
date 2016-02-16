@@ -1,0 +1,42 @@
+{% extends 'forum/base.html.twig' %}
+
+{% block contents %}
+<div class="contents view">
+    <table class="table table-bordered table-striped">
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+    <tr>
+        <td>
+            {{ form_label(form.title) }}
+        </td>
+        <td>
+            {{ form_widget(form.title) }}
+            {{ form_errors(form.title) }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ form_label(form.contents) }}
+        </td>
+        <td>
+            {{ form_widget(form.contents) }}
+            {{ form_errors(form.contents) }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ form_label(form.userName) }}
+        </td>
+        <td>
+            {{ form_widget(form.userName) }}
+            {{ form_errors(form.userName) }}
+        </td>
+    </tr>
+    </table>
+    <div class="text-center" style="margin-top: 20px;">
+        {{ form_row(form.post, {'attr': {'class': 'btn btn-primary'}}) }}
+    </div>
+    {{ form_end(form) }}
+</div>
+
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block contents %}
+
+<div class="sort pull-left text-left" style="width: 40%;">
+    <select id="filter-colour" class="form-control pull-left" style="width: 100px; margin-right: 10px;">
+        <option value="all" {% if color == 'all' %}selected{% endif %}>- Colour -</option>
+        <option value="red" {% if color == 'red' %}selected{% endif %}>Red</option>
+        <option value="rose" {% if color == 'rose' %}selected{% endif %}>Rose</option>
+        <option value="white" {% if color == 'white' %}selected{% endif %}>White</option>
+    </select>
+
+    <select id="filter-country" class="form-control pull-left" style="width: 200px;">
+        <option value="all">- Country -</option>
+        {% for countryObject in countries %}
+            <option value="{{ countryObject.id }}" {% if country == countryObject.id %}selected{% endif %}>{{ countryObject.name }}</option>
+        {% endfor %}
+    </select>
+
+    <div class="clearfix"></div>
+
+    <div>
+        {% for message in app.session.flashbag.get('Warning') %}
+            {{ message }}<br>
+        {% endfor %}
+    </div>
+</div>
+
+<br/>
+
+{#<div class="search pull-right text-right">
+    <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter">
+</div>#}
+
+<div class="list">
+    <table class="order-table table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Region</td>
+                <td>Country</td>
+                <td>Color</td>
+                <td>Vintage</td>
+                <td>Show</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% if pagination|length > 0 %}
+            {% for wine in pagination %}
+                <tr>
+                    <td>{{ wine.id }}</td>
+                    <td><a href="{{ path('admin_view', { id: wine.id } ) }}">{{ wine.name }}</a></td>
+                    <td>{{ wine.region.name }}</td>
+                    <td>{{ wine.region.country.name }}</td>
+                    <td>{{ wine.color }}</td>
+                    <td>{{ wine.vintage }}</td>
+                    <td>
+                        {% if wine.hidden == false %}
+                        <span class="glyphicon glyphicon-ok"></span>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="7">
+                    There is no wine
+                </td>
+            </tr>
+        {% endif %}
+
+        </tbody>
+    </table>
+</div>
+    <div class="footer">
+        <a class="btn btn-primary" href="{{ path('admin_create' ) }}">New</a>
+    </div>
+
+    {{ knp_pagination_render(pagination) }}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        $('#filter-colour').change(function() {
+            location.href = '/admin/country/{{ country }}/color/' + $(this).val();
+        });
+        $('#filter-country').change(function() {
+            location.href = '/admin/country/' + $(this).val() + '/color/{{ color }}';
+        });
+    </script>
+{% endblock %}

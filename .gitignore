@@ -1,0 +1,9 @@
+.idea
+logs
+var/cache
+var/logs
+var/sessions
+var/bootstrap.php.cache
+app/config/parameters.yml
+web/app_dev.php
+composer.phar

@@ -1,0 +1,117 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block contents %}
+    <div class="contents view">
+        <table class="table table-bordered table-striped">
+            {{ form_start(form) }}
+            {{ form_errors(form) }}
+            <tr>
+                <td>
+                    {{ form_label(form.name) }}
+                </td>
+                <td>
+                    {{ form_widget(form.name, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.name) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.composition) }}
+                </td>
+                <td>
+                    {{ form_widget(form.composition, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.composition) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.method) }}
+                </td>
+                <td>
+                    {{ form_widget(form.method, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.method) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.history) }}
+                </td>
+                <td>
+                    {{ form_widget(form.history, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.history) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.keyPoint) }}
+                </td>
+                <td>
+                    {{ form_widget(form.keyPoint, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.keyPoint) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.testingNotes) }}
+                </td>
+                <td>
+                    {{ form_widget(form.testingNotes, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.testingNotes) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.color) }}
+                </td>
+                <td>
+                    {{ form_widget(form.color, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.color) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.vintage) }}
+                </td>
+                <td>
+                    {{ form_widget(form.vintage, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.vintage) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.style) }}
+                </td>
+                <td>
+                    {{ form_widget(form.style, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.style) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.region) }}
+                </td>
+                <td>
+                    {{ form_widget(form.region, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.region) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.hidden) }}
+                </td>
+                <td>
+                    {{ form_widget(form.hidden, {'attr': {'class': 'form-control'}}) }}
+                    {{ form_errors(form.hidden) }}
+                </td>
+            </tr>
+
+
+        </table>
+
+        <div class="text-center" style="margin-top: 20px;">
+            {{ form_row(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+        </div>
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
