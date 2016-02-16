@@ -35,11 +35,9 @@ class AdminController extends Controller
      */
     public function forumShow(Request $request)
     {
-//        $post = new Post();
         $form = $this->createForm(new PostForm());
 
         $form->handleRequest($request);
-
 
         return $this->render('/forum/post.html.twig', array(
             'form' => $form->createView(),
@@ -169,7 +167,7 @@ class AdminController extends Controller
      */
     public function deleteAction($id)
     {
-        $em = $this->getDoctrine()->getManager();
+        $em   = $this->getDoctrine()->getManager();
         $wine = $em->getRepository('AppBundle:Wine')->find($id);
 
         if(!$wine){
